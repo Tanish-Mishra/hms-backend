@@ -17,11 +17,11 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan('dev')); // 'dev' is the predefined format for Morgan, you can also use other formats
-app.use("/public",public_router);
+app.use("/hms/public",public_router);
 app.use(auth_router);
 app.use(admin_router);
 app.use(patient_router);
-app.use("/public",public_router)
+app.use("/hms/public",public_router)
 app.use(doctor_router);
 
 // {
